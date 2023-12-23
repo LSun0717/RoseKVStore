@@ -95,7 +95,13 @@ public class SsTable implements Closeable {
         ssTable.doCreateFromFile();
         return ssTable;
     }
-// TODO
+
+    /**
+     * 从SSTable中查询数据
+     * @param key 数据键
+     * @return Command obj
+     * @throws IOException
+     */
     public Command query(String key) throws IOException {
         var sparseKeyPositionList = new LinkedList<Position>();
         Position lastSmallPosition = null;

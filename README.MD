@@ -10,3 +10,4 @@
 - Fastjson2
 - Lombok
 - SLF4J
+- junit4
