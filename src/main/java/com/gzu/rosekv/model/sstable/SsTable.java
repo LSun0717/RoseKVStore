@@ -67,6 +67,7 @@ public class SsTable implements Closeable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        sparseIndex = new TreeMap<>();
     }
 
     /**

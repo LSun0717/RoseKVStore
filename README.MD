@@ -4,7 +4,10 @@
 # Feature
 - NoSQL键值对数据存储
 - 分段查询
+- WAL（预写日志）
+- SSTable
 - ......(coming soon)
+
 # FrameWork
 - JDK17
 - Fastjson2

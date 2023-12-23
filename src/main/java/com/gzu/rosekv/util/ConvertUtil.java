@@ -14,7 +14,7 @@ import com.gzu.rosekv.model.command.SetCommand;
  * @Created by LIONS7
  */
 public class ConvertUtil {
-    public static final String COMMAND_TYPE = "type";
+    public static final String COMMAND_TYPE = "commandType";
 
     /**
      * 将json字符串序列化为Command对象
@@ -22,6 +22,7 @@ public class ConvertUtil {
      * @return Command obj
      */
     public static Command jsonToCommand(JSONObject value) {
+        var ret = value.getString(COMMAND_TYPE);
         if (value.getString(COMMAND_TYPE).equals(CommandTypeEnum.SET.name())) {
             return value.toJavaObject(SetCommand.class);
         } else if (value.getString(COMMAND_TYPE).equals(CommandTypeEnum.RM.name())) {
